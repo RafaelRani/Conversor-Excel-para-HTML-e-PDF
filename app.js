@@ -9,7 +9,7 @@ var leitor = new Reader()
 var escritor = new Writer()
 
 async function main(){
-    var dados = await leitor.read("./users.CSV") //faz a leitura do arquivo em uma string única
+    var dados = await leitor.read("./table.CSV") //faz a leitura do arquivo em uma string única
     var dadosProcessados = Processor.process(dados) //transforma essa string em um array com várias partes
     //faz a separação em cabeçalho da tabela, linhas da tabela e retorna num de linha e colunas
     var usuarios = new Table(dadosProcessados) 
